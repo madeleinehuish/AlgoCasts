@@ -8,4 +8,14 @@ function reverseArray(arr) {
 	return reversed;
 }
 
+// function reverseArray(arr) {
+// 	let reversed = [];
+// 	let counter = arr.length -1;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		reversed[i] = arr[counter];
+// 		counter--;
+// 	}
+// 	return reversed;
+// }
+
 module.exports = reverseArray;

@@ -17,4 +17,23 @@ function findThreeNumbers(arr) {
 	}
 }
 
+
+//find how many pairs add up to sum given one array, this is an O(n) solution unlike above...
+function getPairsCount(arr, sum) {
+	let hashMap = {};
+	for(let i=0; i < arr.length; i++) {
+		hashMap[arr[i]] = (hashMap[arr[i]] || 0) + 1;
+	}
+	let twice_count = 0;
+	for(let i=0; i<arr.length; i++) {
+		if(hashMap[sum-arr[i]]) {
+			console.log('hashMap[sum-arr[i]] : ', arr[i]);
+			twice_count += hashMap[sum-arr[i]];
+		}
+		if(sum-arr[i] === arr[i]) twice_count--;
+	}
+
+	return twice_count/2;
+}
+
 module.exports = findThreeNumbers;

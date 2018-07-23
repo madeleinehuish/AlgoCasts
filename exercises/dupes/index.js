@@ -50,6 +50,19 @@ function findTotalNumberOfDupes(arr) {
   return totalDupes;
 }
 
+//return array of all duplicates
+function returnArrOfAllDuplicates(arr) {
+  var arrOfDupes =[];
+  let charMap = {};
+  for(let char of arr) {
+    charMap[char] = (charMap[char] || 0) + 1;
+  }
+  for(let char in charMap) {
+    if(charMap[char] > 1) arrOfDupes.push(char);
+  }
+  return arrOfDupes;
+}
+
 function areThereAnyDupes(arr) {
   let counts = {};
   arr.forEach(elem => {

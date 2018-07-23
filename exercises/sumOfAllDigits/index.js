@@ -10,4 +10,13 @@ function sumOfAllDigits(number) {
 	return sum;
 }
 
+// //awesome functional solution I came up with :)
+// function sumOfAllDigits(number) {
+// 	return number
+// 					.toString()
+// 					.split('')
+// 					.map(elem => Number(elem))
+// 					.reduce((acc, curr) => acc + curr)
+// }
+
 module.exports = sumOfAllDigits;

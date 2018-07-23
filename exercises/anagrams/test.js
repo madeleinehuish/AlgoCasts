@@ -20,6 +20,10 @@ test('"One one" is not an anagram of "One one c"', () => {
   expect(anagrams('One one', 'One one c')).toBeFalsy();
 });
 
+test('"one one" is not an anagram of "onc onc"', () => {
+  expect(anagrams('one one', 'onc onc')).toBeFalsy();
+})
+
 test('"A tree, a life, a bench" is not an anagram of "A tree, a fence, a yard"', () => {
   expect(
     anagrams('A tree, a life, a bench', 'A tree, a fence, a yard')

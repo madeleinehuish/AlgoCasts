@@ -15,9 +15,9 @@ function reverseInt(n) {
 		.reverse()
 		.join('');
 
-		console.log('reversed Int: ', reversed);
+		// console.log('reversed Int: ', reversed);
 
-return parseInt(reversed) * Math.sign(n);
+		return parseInt(reversed) * Math.sign(n);
 
 	// // or can do like this
 	// if (n < 0 ) {
